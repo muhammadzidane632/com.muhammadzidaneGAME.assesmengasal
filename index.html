@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy Defender - Space Shooter Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-wrapper">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">🚀 GALAXY DEFENDER</h1>
+            <p class="tagline">Defend the Galaxy from Space Invaders!</p>
+        </header>
+
+        <!-- Main Game Area -->
+        <div class="main-container">
+            <!-- Stats Panel Left -->
+            <div class="panel left-panel">
+                <div class="panel-section">
+                    <h3 class="panel-title">📊 STATS</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">Score:</span>
+                        <span id="score" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Level:</span>
+                        <span id="level" class="stat-value">1</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Lives:</span>
+                        <span id="lives" class="stat-value">❤️❤️❤️</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">Enemies:</span>
+                        <span id="enemies" class="stat-value">0</span>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3 class="panel-title">🎮 CONTROLS</h3>
+                    <div class="control-item">
+                        <kbd>W</kbd> <span>Move Up</span>
+                    </div>
+                    <div class="control-item">
+                        <kbd>A</kbd> <span>Move Left</span>
+                    </div>
+                    <div class="control-item">
+                        <kbd>S</kbd> <span>Move Down</span>
+                    </div>
+                    <div class="control-item">
+                        <kbd>D</kbd> <span>Move Right</span>
+                    </div>
+                    <div class="control-item">
+                        <kbd>SPACE</kbd> <span>Shoot</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Game Canvas -->
+            <div id="game-container"></div>
+
+            <!-- Info Panel Right -->
+            <div class="panel right-panel">
+                <div class="panel-section">
+                    <h3 class="panel-title">ℹ️ INFO</h3>
+                    <p class="info-text">Destroy all enemies to advance to the next level!</p>
+                    <p class="info-text">Each level increases difficulty with more enemies.</p>
+                </div>
+
+                <div class="panel-section">
+                    <h3 class="panel-title">🎯 OBJECTIVES</h3>
+                    <div id="objectives">
+                        <div class="objective">✓ Survive waves</div>
+                        <div class="objective">✓ Destroy enemies</div>
+                        <div class="objective">✓ Get high score</div>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3 class="panel-title">🏆 HIGH SCORE</h3>
+                    <div id="highscore" class="highscore">0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Control Buttons -->
+        <div class="controls">
+            <button id="startBtn" class="btn btn-start">START GAME</button>
+            <button id="pauseBtn" class="btn btn-pause" disabled>PAUSE</button>
+            <button id="restartBtn" class="btn btn-restart" disabled>RESTART</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
